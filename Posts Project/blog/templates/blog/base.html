@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Base</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #0d6efd;
+        }
+
+        a {
+            list-style: none;
+            text-decoration: none;
+        }
+
+        body {
+            background-color: #8fb2e0;
+        }
+
+        nav {
+            border-bottom: 1.5px #0d6efd solid;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-row {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            margin: 0;
+        }
+
+
+        li {
+            list-style: none;
+            ;
+        }
+
+        .btn-primary {
+            font-weight: 700;
+            font-size: 20px;
+            letter-spacing: 0%;
+            padding: 15px 20px;
+            border-radius: 15px;
+            background-color: white;
+            color: #0d6efd;
+            border: 1.5px #0d6efd solid;
+            background-color: transparent;
+        }
+
+        .btn-primary:hover {
+            font-weight: 700;
+            font-size: 20px;
+            letter-spacing: 0%;
+            padding: 15px 20px;
+            border-radius: 15px;
+        }
+
+        .content-section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .btn-online-secondary {
+            background-color: white;
+            color: orange;
+            border-radius: 10px;
+            border: 1.5px orange solid;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 56px;
+            letter-spacing: 0%;
+        }
+
+        .btn-online-secondary:hover {
+            background-color: orange;
+            color: white;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 56px;
+            letter-spacing: 0%;
+        }
+
+        .btn-online-danger {
+            background-color: white;
+            color: red;
+            border-radius: 10px;
+            border: 1.5px red solid;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 56px;
+            letter-spacing: 0%;
+        }
+
+        .btn-online-danger:hover {
+            background-color: red;
+            color: white;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 56px;
+            letter-spacing: 0%;
+        }
+
+        .display-4 {
+            font-weight: 700;
+            font-size: 45px;
+            line-height: 56px;
+            letter-spacing: 0%;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expend-lg mb-4">
+        <div class="container">
+            <div class="nav-row">
+                <span> <a href="{% url 'home' %}">Posts</a></span>
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'post-create' %}">Create Post</a></li>
+                    <li><a href="{% url 'home' %}">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
